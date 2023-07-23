@@ -21,6 +21,6 @@ services:
   recharge:
     image: rakesh2310/rechargeimagerepo
     ports:
-      - 84:80
+      - 85:80
     deploy:
       replicas: 3
