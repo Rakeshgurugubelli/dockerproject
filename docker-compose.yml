@@ -1,24 +1,26 @@
-version: '3'
-services: 
-movies: 
-image: rakesh2310/moviesimagerepo
-ports:
-- "82:80"
-deploy:
-replicas: 3
-train:
-image: rakesh2310/trainimagerepo
-ports:
-- "83:80"
-deploy: 
-replicas: 3
-image: rakesh2310/dthimagerepo
-ports:
-- "84:80"
-deploy: 
-replicas: 3
-image: rakesh2310/rechargeimagerepo
-ports:
-- "85:80"
-deploy: 
-replicas: 3
+version: "3"
+services:
+  movies:
+    image: rakesh2310/moviesimagerepo
+    ports:
+      - 82:80
+    deploy:
+      replicas: 3
+  train:
+    image: rakesh2310/trainimagerepo
+    ports:
+      - 83:80
+    deploy:
+      replicas: 3
+  dth:
+    image: rakesh2310/dthimagerepo
+    ports:
+      - 84:80
+    deploy:
+      replicas: 3
+  recharge:
+    image: rakesh2310/rechargeimagerepo
+    ports:
+      - 84:80
+    deploy:
+      replicas: 3:
